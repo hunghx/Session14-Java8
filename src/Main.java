@@ -111,7 +111,7 @@ public class Main {
 
         List<String> list = null;
 
-        list.add("Nam");
+//        list.add("Nam");
 
         Optional<List<String>> listOptional = Optional.ofNullable(list);
         // kiểm tra null
@@ -121,10 +121,11 @@ public class Main {
         }
 
         List<String> result = listOptional.orElse(new ArrayList<>());
-        List<String> result1 = listOptional.orElseThrow(() -> new RuntimeException("errorrrr ..."));
+//        List<String> result1 = listOptional.orElseThrow(() -> new RuntimeException("errorrrr ..."));
 
 
-
+        ActionType add = ActionType.ADD;
+        System.out.println(ChronoUnit.NANOS.name());
 
     }
 }
