@@ -5,14 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27d563af-e97c-44f1-aff2-c08d89a967c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BaiTap9.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/config/ShopConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/entity/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/entity/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/run/DemoMangement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/run/EmployeeMangement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/design/IDepartmentDesign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/design/IEmployeeDesign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/design/IGenericDesign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/impl/DepartmentImplement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/impl/EmployeeImplement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/run/DepartmentManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/run/EmployeeManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/run/MenuManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/run/SearchManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/entity/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ra/bttonghop/run/DemoMangement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ra/bttonghop/run/EmployeeMangement.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -52,6 +58,7 @@
     "Application.DemoMangement.executor": "Run",
     "Application.EmployeeMangement.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.MenuManagement.executor": "Run",
     "Application.baiTap3.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -65,7 +72,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MenuManagement">
     <configuration name="DemoMangement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ra.bttonghop.run.DemoMangement" />
       <module name="Session14-Java8" />
@@ -79,8 +86,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MenuManagement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ra.bttonghop.run.MenuManagement" />
+      <module name="Session14-Java8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ra.bttonghop.run.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MenuManagement" />
         <item itemvalue="Application.DemoMangement" />
       </list>
     </recent_temporary>
@@ -103,7 +124,8 @@
       <updated>1710983518029</updated>
       <workItem from="1710983519185" duration="3919000" />
       <workItem from="1710987805600" duration="9458000" />
-      <workItem from="1711070027952" duration="6551000" />
+      <workItem from="1711070027952" duration="7110000" />
+      <workItem from="1711097369721" duration="4885000" />
     </task>
     <servers />
   </component>

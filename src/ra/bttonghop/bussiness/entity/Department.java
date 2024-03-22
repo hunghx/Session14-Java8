@@ -40,8 +40,10 @@ public class Department {
         this.totalMembers = totalMembers;
     }
 
-    public void inputData(List<Department> departmentList){
-        this.departmentId = getInputDepartmentId(departmentList);
+    public void inputData(boolean isAdd,List<Department> departmentList){
+        if (isAdd) {
+            this.departmentId = getInputDepartmentId(departmentList);
+        }
         this.departmentName = getInputDepartmentName(departmentList);
     }
     private String getInputDepartmentId(List<Department> departmentList){

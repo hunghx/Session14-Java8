@@ -84,8 +84,10 @@ public class Employee {
         this.department = department;
     }
 
-    public void inputData(List<Employee> employeeList,List<Department> departmentList){
-        this.employeeId = getInputEmployeeId(employeeList);
+    public void inputData(boolean isAdd,List<Employee> employeeList,List<Department> departmentList){
+        if (isAdd) {
+            this.employeeId = getInputEmployeeId(employeeList);
+        }
         this.employeeName = getInputEmployeeName();
         this.birthday = getInputBirthDay();
         this.salary = new Scanner(System.in).nextDouble();
@@ -154,7 +156,10 @@ public class Employee {
             System.out.println("Nhập vào vị trí phòng ban (theo STT)");
             int index = sc.nextInt();
             if (index>=1 && index<= departmentList.size()){
-                return departmentList.get(index-1);
+                Department department1 = departmentList.get(index - 1);
+                // tăng số nhân viên lên 1
+                department1.setTotalMembers(department1.getTotalMembers()+1);
+                return department1;
             }
             System.err.println("Vi tri nhap khong hơp lẹ, vui lòng chọn lại");
         }
@@ -191,9 +196,15 @@ public class Employee {
 
 
     public void displayData(){
+        System.out.printf("| ID : %-5s | Name : %-15s |\n",
+                employeeId,employeeName);
+        System.out.println("----------------------------------------------------------------------------------");
+    }
+    public void displayDetailData(){
         System.out.printf("| ID : %-5s | Name : %-15s | DoB : %-10s | Sex : %-3s | Salary : %-10s | Manager: %-15s | Department : %-15s |\n",
                 employeeId,employeeName,birthday.format(ShopConfig.DTF),sex?"Nam":"Nữ",salary,manager!=null?manager.getEmployeeName():"null",department.getDepartmentName());
         System.out.println("----------------------------------------------------------------------------------");
     }
+
 
 }
