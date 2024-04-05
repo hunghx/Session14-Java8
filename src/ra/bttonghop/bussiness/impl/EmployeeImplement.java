@@ -1,16 +1,31 @@
 package ra.bttonghop.bussiness.impl;
 
+import ra.bttonghop.bussiness.config.IOFile;
 import ra.bttonghop.bussiness.design.IEmployeeDesign;
 import ra.bttonghop.bussiness.entity.Department;
 import ra.bttonghop.bussiness.entity.Employee;
 
+import java.io.IOError;
 import java.util.*;
 import java.util.stream.Collectors;
 
 import static ra.bttonghop.bussiness.impl.DepartmentImplement.departmentList;
 
 public class EmployeeImplement implements IEmployeeDesign {
-    static List<Employee> employeeList = new ArrayList<>();
+    static List<Employee> employeeList ;
+    static {
+//        employeeList = IOFile.readFromFile(IOFile.EMPLOYEE_PATH);
+        List<Employee> employees = IOFile.readFromFile(IOFile.EMPLOYEE_PATH);
+        employeeList = employees.stream()
+                .map(oldEm->{
+                    Department department = findDepartmentById(oldEm.getDepartment().getDepartmentId());
+                    Employee manager = new EmployeeImplement().findById(oldEm.getManager().getEmployeeId());
+                    return new Employee(oldEm,department,manager);
+                }).collect(Collectors.toList());
+    }
+    private static Department findDepartmentById(String departmentId){
+        return departmentList.stream().filter(d->d.getDepartmentId().equals(departmentId)).findFirst().orElse(null);
+    }
 
     @Override
     public void displayAll() {
@@ -35,6 +50,7 @@ public class EmployeeImplement implements IEmployeeDesign {
             employee.inputData(true, employeeList, departmentList);
             employeeList.add(employee);
         }
+        IOFile.writeToFile(IOFile.EMPLOYEE_PATH,employeeList);
         System.out.println("Đã them moi thanh cong ");
     }
 
@@ -57,6 +73,7 @@ public class EmployeeImplement implements IEmployeeDesign {
 
         System.out.println("Nhập thông tin mới");
         edit.inputData(false, employeeList, departmentList);
+        IOFile.writeToFile(IOFile.EMPLOYEE_PATH,employeeList);
         System.out.println("Cập nhật thành công");
     }
 
@@ -74,7 +91,7 @@ public class EmployeeImplement implements IEmployeeDesign {
         }
 
         employeeList.remove(delete);
-
+        IOFile.writeToFile(IOFile.EMPLOYEE_PATH,employeeList);
         System.out.println("Xóa thành cong");
 
     }

@@ -2,12 +2,13 @@ package ra.bttonghop.bussiness.entity;
 
 import ra.bttonghop.bussiness.config.ShopConfig;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Scanner;
 
-public class Employee {
+public class Employee  implements Serializable {
     private String employeeId,employeeName;
     private LocalDate birthday;
     private boolean sex;
@@ -16,6 +17,16 @@ public class Employee {
     private Department department;
 
     public Employee() {
+    }
+
+    public Employee(Employee e,Department department,Employee manager) {
+        this.employeeId = e.employeeId;
+        this.employeeName = e.employeeName;
+        this.birthday = e.birthday;
+        this.sex =e.sex;
+        this.salary = e.salary;
+        this.manager = manager;
+        this.department = department;
     }
 
     public Employee(String employeeId, String employeeName, LocalDate birthday, boolean sex, double salary, Employee manager, Department department) {
@@ -90,7 +101,9 @@ public class Employee {
         }
         this.employeeName = getInputEmployeeName();
         this.birthday = getInputBirthDay();
+        System.out.println("Nhap luong");
         this.salary = new Scanner(System.in).nextDouble();
+        System.out.println("Nhap sex");
         this.sex=new Scanner(System.in).nextBoolean();
         System.out.println("có chon quản lí hay không ?");
         System.out.println("1. Có");

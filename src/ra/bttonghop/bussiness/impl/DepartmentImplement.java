@@ -1,14 +1,19 @@
 package ra.bttonghop.bussiness.impl;
 
+import ra.bttonghop.bussiness.config.IOFile;
 import ra.bttonghop.bussiness.design.IDepartmentDesign;
 import ra.bttonghop.bussiness.entity.Department;
+import ra.bttonghop.bussiness.entity.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import  static ra.bttonghop.bussiness.impl.EmployeeImplement.employeeList;
 public class DepartmentImplement implements IDepartmentDesign {
-    static List<Department> departmentList = new ArrayList<>();
+    static List<Department> departmentList ;
+    static {
+        departmentList = IOFile.readFromFile(IOFile.DEPARTMENT_PATH);
+    }
     @Override
     public void displayAll() {
         if (departmentList.isEmpty()){
@@ -28,7 +33,9 @@ public class DepartmentImplement implements IDepartmentDesign {
             department.inputData(true,departmentList);
             departmentList.add(department);
         }
+        IOFile.writeToFile(IOFile.DEPARTMENT_PATH,departmentList);
         System.out.println("Đã them moi thanh cong ");
+
     }
 
     @Override
@@ -47,6 +54,7 @@ public class DepartmentImplement implements IDepartmentDesign {
         // yêu cầu nhập thông tin mới
         System.out.println("Hãy nhap thong tin mơi ");
         edit.inputData(false,departmentList);
+        IOFile.writeToFile(IOFile.DEPARTMENT_PATH,departmentList);
         System.out.println("Cập nhật thành công");
     }
 
@@ -68,6 +76,7 @@ public class DepartmentImplement implements IDepartmentDesign {
         }
 
         departmentList.remove(delete);
+        IOFile.writeToFile(IOFile.DEPARTMENT_PATH,departmentList);
         System.out.println("Xóa thành công");
     }
 

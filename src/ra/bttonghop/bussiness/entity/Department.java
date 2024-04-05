@@ -1,9 +1,10 @@
 package ra.bttonghop.bussiness.entity;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Scanner;
 
-public class Department {
+public class Department implements Serializable {
     private String departmentId,departmentName ;
     private int totalMembers; // giá trị mặc định = 0
 

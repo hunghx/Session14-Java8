@@ -127,5 +127,14 @@ public class Main {
         ActionType add = ActionType.ADD;
         System.out.println(ChronoUnit.NANOS.name());
 
+
+
+
+        Student[] arrStr = new Student[]{new Student("hung"),new Student("anh"),null,null};
+        Arrays.sort(arrStr);
+        System.out.println(Arrays.toString(arrStr));
+
+
+
     }
 }

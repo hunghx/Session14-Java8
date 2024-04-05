@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27d563af-e97c-44f1-aff2-c08d89a967c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/design/IDepartmentDesign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/design/IEmployeeDesign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/design/IGenericDesign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/impl/DepartmentImplement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/impl/EmployeeImplement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/run/DepartmentManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/run/EmployeeManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/run/MenuManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/run/SearchManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/config/IOFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/data/department.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ra/bttonghop/data/employee.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/entity/Department.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ra/bttonghop/run/DemoMangement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ra/bttonghop/run/EmployeeMangement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/impl/DepartmentImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/impl/DepartmentImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/impl/EmployeeImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ra/bttonghop/bussiness/impl/EmployeeImplement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/AD/IdeaProjects/Session14-Java8",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,6 +83,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Session14-Java8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MenuManagement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ra.bttonghop.run.MenuManagement" />
       <module name="Session14-Java8" />
@@ -102,6 +106,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MenuManagement" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.DemoMangement" />
       </list>
     </recent_temporary>
@@ -109,8 +114,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
-        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
+        <option value="jdk-11.0.22-corretto-11.0.22-3183f394aec4-cd32a1c5" />
       </set>
     </attachedChunks>
   </component>
@@ -125,11 +129,27 @@
       <workItem from="1710983519185" duration="3919000" />
       <workItem from="1710987805600" duration="9458000" />
       <workItem from="1711070027952" duration="7110000" />
-      <workItem from="1711097369721" duration="4885000" />
+      <workItem from="1711097369721" duration="8352000" />
+      <workItem from="1711245705955" duration="12000" />
+      <workItem from="1711588175308" duration="3408000" />
+      <workItem from="1712032505044" duration="11000" />
+      <workItem from="1712279223621" duration="75000" />
+      <workItem from="1712279307739" duration="2124000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ra/bttonghop/bussiness/impl/EmployeeImplement.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
